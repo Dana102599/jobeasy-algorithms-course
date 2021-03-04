@@ -34,15 +34,18 @@ print(digital_root(n))
 
 #* Write a function to check if a number is a Perfect or not
 
-def perfect_number(num):
-    if num <2:
-      return False
-    for n in range(2,num):
-      if num % n == 0:
-        return True
-    return False
-num = int(input("Enter a number: "))
-print(perfect_number(num))
+def perfect_number(n):
+    sum = 0
+    for i in range(2, n):
+        if n % i == 0:
+            sum += i
+    return sum == n
+
+n = int(input(" Please Enter any Number: "))
+print(perfect_number(n))
+
+
+
 
 #Amicable numbers from slides
 def amicable_numbers(x,y):
